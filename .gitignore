@@ -1,0 +1,5 @@
+*.pyc
+.idea/
+log/
+file/
+**/__pycache__
