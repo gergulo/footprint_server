@@ -32,6 +32,7 @@ class CustomPagination(PageNumberPagination):
         分页
         :param queryset: 查询模型
         :param request: 请求实例
+        :param view: --
         :return: 数据页
         """
         self.page_size = self.get_page_size(request)
@@ -73,14 +74,11 @@ class CustomPagination(PageNumberPagination):
         :return:
         """
         if self.paginator is None:
-           return None
+            return None
         else:
             return {
                 "page_size": self.page_size,
                 "current_page": self.page_number,
                 "total_count": self.paginator.count,
                 "total_pages": self.paginator.num_pages
-
             }
-
-

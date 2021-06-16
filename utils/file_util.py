@@ -20,7 +20,7 @@ def save_file(type_path, file, compress=False, thumbnail=False, thumbnail_width=
     :param file: 原始文件
     :param compress: 图片是否压缩，默认是
     :param thumbnail: 图片是否生成缩略图，默认否
-    :thumbnail_width: 缩略图宽度，默认400
+    :param thumbnail_width: 缩略图宽度，默认400
     :return:
     """
     # 按日期分文件夹
@@ -121,5 +121,5 @@ def get_size(file):
 
 
 def get_new_file_path(in_file, txt):
-    (dir, suffix) = os.path.splitext(in_file)
-    return "{0}_{1}{2}".format(dir, txt, suffix)
+    (the_dir, suffix) = os.path.splitext(in_file)
+    return "{0}_{1}{2}".format(the_dir, txt, suffix)

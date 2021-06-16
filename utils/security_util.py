@@ -120,4 +120,3 @@ def get_user_permissions(user_id):
 # 销毁用户权限
 def destroy_user_permissions(user_id):
     cache_util.destroy(_permissions_key + str(user_id))
-

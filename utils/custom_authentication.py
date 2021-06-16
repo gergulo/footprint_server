@@ -15,5 +15,3 @@ class CustomAuthentication(BasicAuthentication):
             return result["user_data"]["id"], result["token"]
         else:
             raise AuthenticationFailed(result)
-
-
